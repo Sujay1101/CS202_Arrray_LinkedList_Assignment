@@ -4,6 +4,7 @@
 #include <stdio.h>
 
 int choice,i,pos,item;
+// Node in a Linked List
 struct node {
 	int data;
 	struct node *link;
