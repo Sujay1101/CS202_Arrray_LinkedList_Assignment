@@ -71,7 +71,7 @@ void merge_lists(int n,int m){
 	front = frontx;
 	ptrx = frontx;
 	ptry = fronty;
-	while((ptrx->link!=frontx)||(ptry!=fronty)){
+	while((ptrx->link!=frontx)&&(ptry!=fronty)){
 		tempx = ptrx->link;
 		ptrx->link = ptry;
 		tempy = ptry->link;

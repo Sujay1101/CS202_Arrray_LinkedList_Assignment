@@ -34,7 +34,7 @@ int main()
 	t = sumto(i-1) + j;
 	printf("\n The element at (i,j) is %d",b[t]);
 	return 0;
-}
+}//End of main
 
 int sumto(int a){
 	int sum=0;
