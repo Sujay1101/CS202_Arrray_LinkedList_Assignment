@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <conio.h>
 #include <malloc.h>
 #include <stdlib.h>
 
@@ -39,14 +38,13 @@ void create(){
 	if(front==NULL){
 		front = new;
 		}/*end of if*/
-	else 
-		rear->link = new;
+	else rear->link = new;
 		rear = new;
 		rear->link = front;
 	printf("\nIf you want to enter more elements , press 1. Pressing anything else will be treated as you dont want to enter any more elements");
 	scanf("%d",&item);
 	if(item == 1) create();
-	else return NULL;
+	else return ;
 	}/*end of create fn*/
 	
 void reverse(){

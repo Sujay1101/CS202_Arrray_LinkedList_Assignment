@@ -1,7 +1,7 @@
 #include <malloc.h>
-#include <conio.h>
 #include <stdlib.h>
 #include <stdio.h>
+
 
 int choice,i,pos,item;
 // Node in a Linked List
@@ -31,7 +31,7 @@ int main()
 				else delete_node();
 				break;
 		case 3:
-				exit();
+				exit(0);
 		default: printf("\nwrong choice\n");
 		}/*end of switch*/
 	}/*end of while*/
@@ -46,7 +46,7 @@ void delete_node(){
 	while(ptr->data != item){
 		ptr = ptr->link;
 		}/*end of while*/
-	while(
+	
 	if ( x == p) { 
 		printf("\nI have just deleted %d ",header->data);
 		header = header->link;
@@ -67,7 +67,7 @@ void insertion(){
 	printf("\n enter the item to be inserted\n");
 	scanf("%d",&item);
 	new->data=item;
-	if(header = = NULL)
+	if(header == NULL)
 		{
 			new->link=NULL;
 			header=new;
@@ -82,6 +82,6 @@ void insertion(){
 	ptr->link=new;
 	printf("\nIf you are done inserting data into linked list, enter 3 . Else enter anything else");
 	scanf("%d",&item);
-	if(item == 3 ) return NULL;
+	if(item == 3 ) return ;
 	else insertion();	
 	}/*end of Insertion fn*/

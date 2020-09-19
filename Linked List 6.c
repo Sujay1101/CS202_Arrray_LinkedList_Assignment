@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <conio.h>
 #include <malloc.h>
 #include <stdlib.h>
 
@@ -9,7 +8,7 @@ void merge_lists(int,int);
 struct node {
 int data;
 struct node *link;
-}*front,*rear*frontx,*rearx,*fronty,*reary,*new,*ptrx,*ptry*temp;
+}*front,*rear,*frontx,*rearx,*fronty,*reary,*new,*ptrx,*ptry,*temp,*tempx,*tempy;
 
 int main()
 {
@@ -44,7 +43,7 @@ void create_nodeX(int i){
 		ptrx->link = new;
 		rearx = new;
 		}
-	return NULL;
+	return;
 }
 
 void create_nodeY(int i){
@@ -64,7 +63,7 @@ void create_nodeY(int i){
 		ptry->link = new;
 		reary = new;
 		}
-	return NULL;
+	return;
 }
 
 void merge_lists(int n,int m){
@@ -93,5 +92,5 @@ void merge_lists(int n,int m){
 		ptrx->link = ptry;
 		rear = reary;
 	}
-	return NULL;
+	return;
 	}
