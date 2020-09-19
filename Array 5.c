@@ -1,3 +1,4 @@
+//Problem 5 in arrays
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -26,7 +27,7 @@ int main()
 	}
 	print_saddle_points(matrix, m, n);
 }
-//Function returns index of maximum element of the array
+//Function returns index of maximum element of array
 int max_of_array(int* arr, int len)
 {
 	int max = 0;
@@ -37,7 +38,7 @@ int max_of_array(int* arr, int len)
 	}
 	return max;
 }
-//Function returns index of minimum element of the array
+//Function returns index of minimum element of array
 int min_of_array(int* arr, int len)
 {
 	int min = 0;
