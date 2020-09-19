@@ -32,6 +32,7 @@ int main() {
 void create(){
 	new=(struct node*)malloc(sizeof(struct node));
 	printf("\nEnter the item: ");
+	fflush(stdin);
 	scanf("%d",&item);
 	new->data = item;
 	if(front==NULL){

@@ -43,6 +43,7 @@ void delete_node(){
 	p = header;
 	printf("\nNow enter the element that you want to delete");
 	scanf("%d",&item);
+	fflush(stdin);
 	while(ptr->data != item){
 		ptr = ptr->link;
 		}/*end of while*/

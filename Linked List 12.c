@@ -43,8 +43,10 @@ void createPoly()
 	{
 		p=(polyptr)malloc(sizeof(struct polynode));
 		printf("\nEnter the coefficient :");
+		fflush(stdin);
 		scanf("%d",&p->coef);
 		printf("\nEnter the exponent : ");
+		fflush(stdin);
 		scanf("%d",&p->exp);
 		p->next=NULL;
 		//IF the polynomial is empty then add this node as the start node of the polynomial

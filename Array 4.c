@@ -17,6 +17,7 @@ int main()
 				}
 			else {
 				scanf("%d",&t);
+				fflush(stdin);
 				m[row][col]=t;
 				}
 		}		

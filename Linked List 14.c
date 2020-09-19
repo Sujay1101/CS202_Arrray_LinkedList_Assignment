@@ -30,6 +30,7 @@ int main()
 		for (int j = 0; j < columns; j++) {
 			printf("\nEnter the value of the element at (%d,%d)",i+1,j+1);
 			scanf("%d",&v);
+			fflush(stdin);
 			// Pass only those values which are non - zero 
 			if (v) 
 				create_new_node(i+1,j+1,v); 

@@ -24,7 +24,8 @@ int main()
 void pread(int i){
 	int coeff,expo;
 	printf("\nEnter the coefficient and exponent of the %d term",i);
-	scanf("%d %d",&coeff,&expo);
+	fflush(stdin);
+	scanf("%d%d",&coeff,&expo);
 	if(coeff!=0){
 	if(front == NULL){
 		new = (struct node*)malloc(sizeof(struct node));

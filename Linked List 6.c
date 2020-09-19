@@ -30,6 +30,7 @@ void create_nodeX(int i){
 	int element;
 	new = (struct node*)malloc(sizeof(struct node));
 	printf("\nEnter x(%d)",i);
+	fflush(stdin);
 	scanf("%d",&element);
 	if(frontx == NULL){
 		new->data = element;
