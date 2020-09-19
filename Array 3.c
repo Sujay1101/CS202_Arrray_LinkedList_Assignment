@@ -1,3 +1,4 @@
+//Problem 3 in arrays
 #include <stdio.h>
 #include <stdlib.h>
 
