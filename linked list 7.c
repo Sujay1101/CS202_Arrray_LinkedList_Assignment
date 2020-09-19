@@ -1,5 +1,8 @@
+//Problem 7 of linked list
+
 #include <stdio.h>
 #include <stdlib.h>
+
 typedef struct node {
 	int num; 
 	struct node* next;
@@ -11,6 +14,25 @@ typedef struct deque
 	node *rear;
 }deque;
 
+void append(deque*, node**, int);
+void prepend(deque*, node**, int);
+void print_linked_list(node*);
+
+int main()
+{
+	deque* q = (deque *)malloc(sizeof(deque));
+	q->front = NULL;
+	q->rear = NULL;
+	node* temp;
+	append(q, &temp, 3);
+	print_linked_list(q->front);
+	putchar('\n');
+	append(q, &temp, 5);
+	print_linked_list(q->front);
+	putchar('\n');
+	prepend(q, &temp, 7);
+	print_linked_list(q->front);
+}
 void append(deque* q, node** temp, int key)
 {
 	//Allocating space for the node to be inserted
@@ -58,18 +80,4 @@ void print_linked_list(node* head)
 	}
 	return;
 }
-int main()
-{
-	deque* q = (deque *)malloc(sizeof(deque));
-	q->front = NULL;
-	q->rear = NULL;
-	node* temp;
-	append(q, &temp, 3);
-	print_linked_list(q->front);
-	putchar('\n');
-	append(q, &temp, 5);
-	print_linked_list(q->front);
-	putchar('\n');
-	prepend(q, &temp, 7);
-	print_linked_list(q->front);
-}
+
