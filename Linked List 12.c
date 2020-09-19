@@ -1,8 +1,10 @@
 #include <stdio.h>
-#include <conio.h>
 #include <malloc.h>
 #include <stdlib.h>
 
+void createPoly();
+void peval();
+int power(int ,int);
 struct polynode
 {
 int coef;
@@ -58,10 +60,10 @@ void createPoly()
 		printf("If more Nodes are to be added then enter 1");
 		scanf("%d",&ch);
 	}
-	return NULL;
+	return;
 }			
 
-void peval(a,x){
+void peval(){
 	printf("\nEnter the value at which the polyomial is evaluated.");
 	scanf("%d",&x);
 	a = start;

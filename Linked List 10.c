@@ -1,9 +1,8 @@
 #include <stdio.h>
-#include <conio.h>
 #include <malloc.h>
 #include <stdlib.h>
 
-
+void pread(int);
 struct node {
 int coef;
 int exp;
@@ -22,7 +21,7 @@ int main()
 	return 0;
 }
 
-void pread(){
+void pread(int i){
 	int coeff,expo;
 	printf("\nEnter the coefficient and exponent of the %d term",i);
 	scanf("%d %d",&coeff,&expo);
@@ -30,7 +29,7 @@ void pread(){
 	if(front == NULL){
 		new = (struct node*)malloc(sizeof(struct node));
 		new->coef = coeff;
-		new->exp = exp;
+		new->exp = expo;
 		new->link = NULL;
 		front = new;
 		rear = new;
@@ -41,7 +40,7 @@ void pread(){
 			ptr = ptr->link;
 		new = (struct node*)malloc(sizeof(struct node));
 		new->coef = coeff;
-		new->exp = exp;
+		new->exp = expo;
 		new->link = NULL;
 		ptr->link = new;
 		rear = new;

@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <conio.h>
 #include <malloc.h>
 #include <stdlib.h>
 
@@ -13,7 +12,7 @@ struct Node
 	int row_position; 
 	int column_postion; 
 	struct Node *next; 
-} *start,*ptr; 
+} *start,*ptr,*r; 
 
 
 int main() 
@@ -43,6 +42,7 @@ int main()
 
 void create_new_node(int row, int column, int v) 
 { 
+	
 	ptr = start; 
 	if (ptr == NULL) 
 	{ 
@@ -62,14 +62,14 @@ void create_new_node(int row, int column, int v)
 
 		// Create new node dynamically 
 		r = (struct Node *) malloc (sizeof(struct Node)); 
-		r->value = value; 
-		r->row_position = row_index; 
-		r->column_postion = column_index; 
+		r->value = v; 
+		r->row_position = row; 
+		r->column_postion = column; 
 		r->next = NULL; 
 		ptr->next = r; 
 
 	}//End of ELSE
-	return NULL;
+	return;
 } //End of create_new_node function
 
 // This function prints contents of linked list 
@@ -82,7 +82,7 @@ void Printtriples()
 		printf("\n(%d , %d ,%d)",ptr->row_position,ptr->column_postion,ptr->value);
 		ptr = ptr->next;
 			}
-	return Null;
+	return;
 } //End of Printtriples function
 
 
